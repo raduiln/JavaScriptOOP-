@@ -1,11 +1,15 @@
 class Carte {
-  constructor(titlu, autor, editura, an_aparitie, pret, nr_pagini) {
+  static reducere=10;
+  constructor(titlu, autor, editura, anAparitie, pret, nrPagini) {
     this.titlu = titlu;
     this.autor = autor;
     this.editura = editura;
-    this.an_aparitie = an_aparitie;
+    this.anAparitie = anAparitie;
     this.pret = pret;
-    this.nr_pagini = nr_pagini;
+    this.nrPagini = nrPagini;
+  }
+  info(){
+    console.log(`Titlul este ${this.titlu}, autor ${this.autor}`)
   }
   descchideCartea(pagina) {
     console.log(`Am deschis cartea la pagina${pagina}`);
@@ -23,6 +27,7 @@ class Carte {
   reducere(procent) {
     this.pret -= (procent * this.pret) / 100;
     console.log(`Pretul cu reducere este ${this.pret}`);
+    
   }
 }
 
@@ -32,3 +37,4 @@ carte.modificaPret(75);
 console.log(carte);
 //  curs 2moduule
 // export
+
