@@ -12,6 +12,10 @@ class NewUser{
     get id(){
         return this._id;
     }
+    // Adresa de email este protected atunci ii definim getter sar nu setam setter
+    get email(){
+        return this._email;
+    }
     
     get varsta(){
         return this.#varsta;
@@ -23,11 +27,7 @@ class NewUser{
     //     console.log('sunt in setter');
     //     this.#varsta = newVarsta;
     // }
-
-    // Adresa de email este protected atunci ii definim getter sar nu setam setter
-    get email(){
-        return this._email;
-    }
+   
     
     mananca (claorii){
         console.log(`Mananca ${claorii} pe zi.`);
